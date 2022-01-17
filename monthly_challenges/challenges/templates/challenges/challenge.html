@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% comment %} {% block page_title %} {% endcomment %}
+{% comment %} {{month|title}}'s Challenge {% endcomment %}
+{% comment %} {% endblock %} {% endcomment %}
+
+
+{% block page_title %} {{month|title}}'s Challenge {% endblock %}
+
+{% block content %}
+<h1> {{month|title}}'s Challenge </h1> 
+{% if text is not None%}
+  <h2>{{text}}</h2>
+{% else %}
+  <p> There is no challenge for this month yet! </p>
+{% endif %}
+{% endblock %}
